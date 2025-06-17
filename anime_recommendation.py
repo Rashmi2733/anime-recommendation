@@ -72,6 +72,20 @@ def knn_recommend(anime_name):
     return most_similar_anime
 
 knn_recommend(anime_name)
+
+
+import pickle
+
+with open(r'D:\DS\Project\anime-recommendation\passage_embeddings.pkl', 'wb') as f:
+    pickle.dump(passage_embeddings, f)
+
+with open(r'D:\DS\Project\anime-recommendation\nn_model.pkl', 'wb') as f:
+    pickle.dump(nn_model, f)
+
+# Also save df500 (the filtered dataframe with sentences)
+df500.to_pickle(r'D:\DS\Project\anime-recommendation\df500.pkl')
+
+
 # import ipywidgets as widgets
 # from IPython.display import display
 # #Dropdown option instead of input option
