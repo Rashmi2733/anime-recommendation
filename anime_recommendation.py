@@ -86,31 +86,3 @@ with open(r'D:\DS\Project\anime-recommendation\nn_model.pkl', 'wb') as f:
 df500.to_pickle(r'D:\DS\Project\anime-recommendation\df500.pkl')
 
 
-# import ipywidgets as widgets
-# from IPython.display import display
-# #Dropdown option instead of input option
-
-# anime_dropdown = widgets.Dropdown(
-#     options=df500['Name'].tolist(),
-#     description='Anime:',
-#     style={'description_width': 'initial'},
-#     layout=widgets.Layout(width='50%')
-# )
-
-# # Output widget
-# output = widgets.Output()
-
-# recommend_button = widgets.Button(description="Recommend")
-
-# # Link button to the action
-# def on_button_clicked(b):
-#     with output:
-#         output.clear_output()  # Clear previous output
-#         recommend(anime_dropdown.value)
-#         knn_recommend(anime_dropdown.value)
-#         # print(f"Most similar anime to '{anime_dropdown.value}': {result}") #redundant
-
-# recommend_button.on_click(on_button_clicked)
-
-# # Display
-# display(anime_dropdown, recommend_button, output)

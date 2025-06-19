@@ -4,7 +4,7 @@ import numpy as np
 import pickle
 import sentence_transformers as st_mod  # alias to avoid clash with streamlit
 
-# Load data and models
+
 @st.cache_data
 def load_data():
     df500 = pd.read_pickle('df500.pkl')
@@ -51,3 +51,7 @@ if st.button("Recommend"):
     
     st.write(f"Most similar anime to '{anime_name}' (SIM method): {sim_recommendation}")
     st.write(f"Most similar anime to '{anime_name}' (KNN method): {knn_recommendation}")
+
+##Need to make it faster? embedding takes too long
+
+##Version two: input number of episodes, genre, etc to get an anime recommendation
